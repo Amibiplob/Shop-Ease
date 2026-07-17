@@ -32,12 +32,7 @@ export default function Banner() {
               <ArrowRight size={18} />
             </Link>
 
-            <Link
-              href="/categories"
-              className="rounded-xl border border-green-600 px-7 py-4 font-semibold text-green-600 transition hover:bg-green-50"
-            >
-              Browse Categories
-            </Link>
+        
           </div>
         </div>
 
