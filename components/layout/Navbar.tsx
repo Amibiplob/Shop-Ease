@@ -15,7 +15,7 @@ const links = [
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileMenu, setMobileMenu] = useState(false);
-  const { cart } = useCart();
+  const { totalItems } = useCart();
   return (
     <header className="sticky top-0 z-50 border-b bg-white/90 backdrop-blur">
       <div className="container mx-auto flex h-14 items-center justify-between px-4 lg:px-8">
@@ -72,7 +72,7 @@ export default function Navbar() {
             <ShoppingCart size={24} />
 
             <span className="absolute -right-5 -top-2 flex h-5 w-7 items-center justify-center rounded-full bg-green-600 text-xs font-semibold text-white">
-              {cart.length}
+              {totalItems}
             </span>
           </Link>
         </div>
@@ -121,7 +121,7 @@ export default function Navbar() {
                 <ShoppingCart size={24} />
 
                 <span className="absolute -right-5 -top-2 flex h-5 w-7 items-center justify-center rounded-full bg-green-600 text-xs font-semibold text-white">
-                  {cart.length}
+                  {totalItems}
                 </span>
               </Link>
             </div>
