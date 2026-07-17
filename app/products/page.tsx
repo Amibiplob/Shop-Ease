@@ -40,17 +40,21 @@ export default function ProductsPage() {
       </div>
 
       {/* Products */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))
-        ) : (
-          <div className="col-span-full py-20 text-center text-gray-500">
-            No products found.
-          </div>
-        )}
-      </div>
+      {products ? (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))
+          ) : (
+            <div className="col-span-full py-20 text-center text-gray-500">
+              No products found.
+            </div>
+          )}
+        </div>
+      ) : (
+        <h1 className="text-center">Loading</h1>
+      )}
     </section>
   );
 }
