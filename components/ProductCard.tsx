@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Star } from "lucide-react";
+import { useCart } from "@/hooks/useCart";
 
 type Product = {
   id: number;
@@ -18,6 +19,7 @@ type ProductCardProps = {
 };
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const { addToCart } = useCart();
   return (
     <div
       key={product.id}
@@ -58,6 +60,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </Link>
 
         <button
+          onClick={() => addToCart(product)}
           type="button"
           className="w-full rounded-xl bg-green-600 p-3 font-semibold text-white transition hover:bg-green-700"
         >

@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import { Star } from "lucide-react";
 import { products } from "@/data/products";
 import ProductCard from "../ProductCard";
 
