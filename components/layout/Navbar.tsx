@@ -67,13 +67,16 @@ export default function Navbar() {
             <User size={20} />
           </button>
 
-          <button className="relative transition hover:text-green-600">
+          <Link
+            href="/cart"
+            className="relative transition hover:text-green-600"
+          >
             <ShoppingCart size={24} />
 
             <span className="absolute -right-5 -top-2 flex h-5 w-7 items-center justify-center rounded-full bg-green-600 text-xs font-semibold text-white">
               {cart.length}
             </span>
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Button */}
